@@ -1,0 +1,23 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "tdonder@gmail.com",
+    "longName": "3D20",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "3D20",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "3ecf1a27-7550-455d-92f9-fdb235d5eb02",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
+}
