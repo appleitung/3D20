@@ -80,7 +80,7 @@ static void resetDice(void) {
   text_layer_set_text(s_textlayer_die_3, "");
 }
 
-static void tap_handler(AccelAxisType axis, int32_t direction) {
+static void roll_dice() {
   // The tap rolls dice
   resetDice();
   
@@ -105,7 +105,15 @@ static void tap_handler(AccelAxisType axis, int32_t direction) {
   }
 }
 
+static void tap_handler(AccelAxisType axis, int32_t direction) {
+  roll_dice();
+}
+
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
+  roll_dice();
+}
+
+static void next_die() {
   switch (die) {
     case D4:
       die = D6;
@@ -141,11 +149,11 @@ static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
 }
 
 static void up_click_handler(ClickRecognizerRef recognizer, void *context) {
-
+  next_die();
 }
 
 static void down_click_handler(ClickRecognizerRef recognizer, void *context) {
-
+  next_die();
 }
 
 static void click_config_provider(void *context) {
